@@ -1,5 +1,5 @@
 public class vehiculoCarga extends Vehiculo {
-    private int capacidad;
+    private double capacidad;
     private int ejes;
 
     

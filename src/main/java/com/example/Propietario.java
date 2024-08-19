@@ -1,20 +1,21 @@
 public class Propietario {
 
     private String nombre;
-    private String id;
+    private String identificacion;
     private String email;
     private String celular;
-    private list<Vehiculo> vehiculos;
+    private int edad;
+    private List<Vehiculo> vehiculos;
 
 
-    public Propietario(String nombre, String id, String email, String celular, list<Vehiculo> vehiculos) {
+    public Propietario(String nombre, String identificacion, String email, String celular, int edad) {
         this.nombre = nombre;
-        this.id = id;
+        this.identificacion = identificacion;
         this.email = email;
         this.celular = celular;
-        this.vehiculos = vehiculos;
+        this.edad = edad;
+        this.vehiculos = new ArrayList<>();
     }
-
 
 
     public String getNombre() {
@@ -22,11 +23,9 @@ public class Propietario {
     }
 
 
-
-    public String getId() {
-        return id;
+    public String getIdentificacion() {
+        return identificacion;
     }
-
 
 
     public String getEmail() {
@@ -34,18 +33,22 @@ public class Propietario {
     }
 
 
-
     public String getCelular() {
         return celular;
     }
 
 
+    public int getEdad() {
+        return edad;
+    }
 
-    public list<Vehiculo> getVehiculos() {
-        return vehiculos;
+    public void addVehiculo(Vehiculo vehiculo) {
+        vehiculos.add(vehiculo);
     }
     
-
+    public List<Vehiculo> getVehiculos() {
+        return vehiculos;
+    }
 
 
 }
